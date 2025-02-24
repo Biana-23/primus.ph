@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Primus</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/uikit.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media-query.css" />
+</head>
+
+<body class="impx-body" id="top">
+
+  <!-- HEADER -->
+  <header id="impx-header">
+    <div class="impx-menu-wrapper style2" data-uk-sticky="top: .impx-page-heading; animation: uk-animation-slide-top">
+      <div class="uk-container uk-container-expand">
+        <nav class="uk-navbar-container uk-navbar-transparent" data-uk-navbar>
+          <div class="uk-navbar-left">
+            <a href="index.html" class="impx-logo"><img src="images/logo.png" alt="Primus"></a>
+          </div>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="restaurant.html">Restaurant</a></li>
+              <li><a href="rooms1.html">Rooms</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li class="uk-active"><a href="about.html">About Us</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <!-- PAGE HEADING -->
+  <div class="impx-page-heading uk-position-relative" style="background-image: url('images/background.jpg'); background-size: cover; background-position: center;">
+    <div class="impx-overlay dark"></div>
+    <div class="uk-container">
+      <div class="uk-width-1-1">
+        <div class="uk-text-center">
+          <h1 class="uk-margin-remove">Contact Us</h1>
+          <p class="impx-text-large">Discover Our Story and Vision</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- PAGE HEADING END -->
+
+  <!-- ABOUT CONTENT -->
+  <div class="uk-padding impx-page-content uk-padding-remove-horizontal">
+    <div class="uk-container">
+      <div class="uk-grid" data-uk-grid>
+
+        <!-- Image Section -->
+        <div class="uk-width-1-2@l">
+          <img src="images/about-img-2.jpg" alt="About Us" style="width: 100%; border-radius: 10px;">
+        </div>
+
+        <!-- Text Content -->
+        <div class="uk-width-1-2@l">
+          <h2>Welcome to Primus</h2>
+          <p>We are dedicated to providing exceptional hotel and resort experiences. Our journey started with a vision to create a haven of comfort and elegance for travelers around the world.</p>
+          <p>From our luxurious rooms to our world-class amenities, we ensure every guest enjoys an unforgettable stay. At Primus, hospitality is not just a service; it's a tradition.</p>
+          <ul class="uk-list uk-list-bullet">
+            <li>Top-notch customer service</li>
+            <li>Luxurious accommodations</li>
+            <li>Global network of resorts</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- ABOUT CONTENT END -->
+
+  <!-- LOCATION SECTION -->
+  <div class="uk-padding uk-padding-remove-horizontal">
+    <div class="uk-container">
+      <h2 class="uk-text-center">Our Location</h2>
+      <div id="map" style="width: 100%; height: 400px; border-radius: 10px;"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="impx-footer" class="uk-padding uk-padding-remove-bottom uk-padding-remove-horizontal">
+    <div class="uk-container">
+      <div class="uk-flex uk-flex-center" data-uk-grid>
+        <div class="uk-width-1-2@xl uk-text-center">
+          <img src="images/logo.png" alt="Primus Logo">
+          <p class="uk-margin-bottom">Primus Hotel & Resort, KM9 Pacol Rd, Naga Bicol</p>
+          <p>Email: <a href="mailto:primus@gmail.com">primus@gmail.com</a> | Phone: <a href="tel:09175069156">0917 506 9156</a></p>
+          <div class="impx-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#top" class="to-top fa fa-long-arrow-up" data-uk-scroll></a>
+  </footer>
+  <!-- FOOTER END -->
+
+  <!-- Scripts -->
+  <script src="js/jquery.js"></script>
+  <script src="js/uikit.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+  <script>
+    function initMap() {
+      const location = { lat: 13.642258, lng: 123.204113 }; // Example: Primus Hotel coordinates
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: location,
+      });
+      new google.maps.Marker({
+        position: location,
+        map,
+      });
+    }
+  </script>
+</body>
+
+</html>
